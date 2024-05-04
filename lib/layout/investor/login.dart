@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:project_fundfinder/layout/investor/sign_up/sign_up.dart';
+import 'package:project_fundfinder/modules/botton_navigation.dart';
 import 'package:project_fundfinder/modules/splash.dart';
 import 'package:project_fundfinder/shared/components/containerbutton.dart';
 import 'package:project_fundfinder/shared/components/navigatorto.dart';
@@ -183,10 +184,10 @@ class _LoginScreenState extends State<LoginScreen> {
                           const SnackBar(content: Text('Success')
                           ),
                         );
-                        Navigator.of(context).push(MaterialPageRoute(builder: (context) =>const Splash_Screen(),));
+                       navigateAndFinish(context, const Bottom_Navigation());
 
                       }
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context) =>const Splash_Screen(),));
+                     // Navigator.of(context).push(MaterialPageRoute(builder: (context) =>const Splash_Screen(),));
                     },),
                 ),
                 const SizedBox(
