@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:project_fundfinder/layout/investor/recomedend.dart';
+import 'package:project_fundfinder/shared/components/navigatorto.dart';
 import 'package:project_fundfinder/shared/components/textbest.dart';
 
 class Home_Screen extends StatefulWidget {
@@ -10,7 +13,6 @@ class Home_Screen extends StatefulWidget {
 
 class _Home_ScreenState extends State<Home_Screen> {
 
-  bool onTap = false;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +21,7 @@ class _Home_ScreenState extends State<Home_Screen> {
         title: TextBest(
             text: 'Fundfinder',
         fontSize: 30
-        ,color: Colors.black,),
+        ,color: Colors.blue,),
         centerTitle: true,
       ),
       body: Padding(
@@ -31,19 +33,23 @@ class _Home_ScreenState extends State<Home_Screen> {
               children: [
                 TextBest(text:
                 'Recommendation',
-                  color: Colors.black,
                 ),
                 const SizedBox(
                   width: 10,
                 ),
                 InkWell(
-                  onTap: (){},
+                  onTap: (){
+                    navigateTo(context, const Recomedend_Screen());
+                  },
                   child: TextBest(text:
                   'See All',
                     color: Colors.blue,
                   ),
                 ),
               ],
+            ),
+            const SizedBox(
+              height: 3,
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height/2.9,
@@ -55,22 +61,48 @@ class _Home_ScreenState extends State<Home_Screen> {
                     return Card(
                       margin: const EdgeInsets.symmetric(horizontal: 10),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Image.network('https://th.bing.com/th/id/OIP.GM5eREp5FjuDvC6GhlDMuAAAAA?rs=1&pid=ImgDetMain'),
+                          SizedBox(
+                              height :MediaQuery.of(context).size.height/4.1,
+                              child: Image.network('https://2018.panfoundation.org/static/658273e4f451e41fb8bec97713ff570a/b36f0/3-fundfinder-get-help-for-your-out-of-pocket-costs-linkedin-people-1-.png')),
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          TextBest(text: '   TriAgenics',),
                           const SizedBox(
                             height: 5,
                           ),
                           Row(
                             children: [
-                              IconButton(
-                                  onPressed: (){
-                                    setState(() {
-                                      onTap = !onTap ;
-                                    });
-                                  },
-                                  icon:onTap ? const Icon(Icons.favorite,color: Colors.red,size: 30,) : const Icon(Icons.favorite,color: Colors.white,size: 30,)),
-                              TextBest(text: 'Likes',color: Colors.black,
-                              fontSize: 30,)
+                               SizedBox(
+                                width: MediaQuery.of(context).size.width/20,
+                              ),
+                             Column(
+                               children: [
+                                 TextBest(text:' \$4.42M',color: Colors.blue,fontSize: 18,),
+                                 TextBest(text: 'Raised',fontSize: 13,),
+                               ],
+                             ),
+                               SizedBox(
+                                 width: MediaQuery.of(context).size.width/20,
+                              ),
+
+                              Column(
+                                children: [
+                                  TextBest(text:'14924',color: Colors.blue,fontSize: 18,),
+                                  TextBest(text: 'Investors',fontSize: 13,),
+                                ],
+                              ),
+                               SizedBox(
+                                 width: MediaQuery.of(context).size.width/20,
+                              ),
+                              Column(
+                                children: [
+                                  TextBest(text:' \$40',color: Colors.blue,fontSize: 18,),
+                                  TextBest(text: 'Min. Investment',fontSize: 13,),
+                                ],
+                              ),
                             ],
                           ),
                     
@@ -99,22 +131,49 @@ class _Home_ScreenState extends State<Home_Screen> {
                     return Card(
                       margin: const EdgeInsets.symmetric(horizontal: 10),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Image.asset('assets/images/most.png'),
+                          SizedBox(
+                              height :MediaQuery.of(context).size.height/4.1,
+                              child: Image.asset('assets/images/most.png')),
+                          const SizedBox(
+                            height: 5,
+                          ),
+                          TextBest(text: '   TriAgenics',),
                           const SizedBox(
                             height: 5,
                           ),
                           Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              IconButton(
-                                  onPressed: (){
-                                    setState(() {
-                                      onTap = !onTap ;
-                                    });
-                                  },
-                                  icon:onTap ? const Icon(Icons.favorite,color: Colors.red,size: 30,) : const Icon(Icons.favorite,color: Colors.white,size: 30,)),
-                              TextBest(text: 'Likes',color: Colors.black,
-                                fontSize: 30,)
+                               SizedBox(
+                                width: MediaQuery.of(context).size.width/16,
+                              ),
+                              Column(
+                                children: [
+                                  TextBest(text:' \$4.42M',color: Colors.blue,fontSize: 18,),
+                                  TextBest(text: 'Raised',fontSize: 13,),
+                                ],
+                              ),
+                               SizedBox(
+                                width: MediaQuery.of(context).size.width/10,
+                              ),
+
+                              Column(
+                                children: [
+                                  TextBest(text:'14924',color: Colors.blue,fontSize: 18,),
+                                  TextBest(text: 'Investors',fontSize: 13,),
+                                ],
+                              ),
+                               SizedBox(
+                                width: MediaQuery.of(context).size.width/10,
+                              ),
+                              Column(
+                                children: [
+                                  TextBest(text:' \$40',color: Colors.blue,fontSize: 18,),
+                                  TextBest(text: 'Min. Investment',fontSize: 13,),
+                                ],
+                              ),
                             ],
                           ),
 
