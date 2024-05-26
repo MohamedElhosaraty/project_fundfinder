@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:project_fundfinder/layout/investor/comoany.dart';
 import 'package:project_fundfinder/modules/splash.dart';
 
 void main() {
