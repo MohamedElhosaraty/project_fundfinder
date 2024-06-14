@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:project_fundfinder/layout/investor/comoany.dart';
+import 'package:project_fundfinder/layout/investor/home.dart';
 import 'package:project_fundfinder/modules/splash.dart';
 
 void main() {
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Splash_Screen(),
+      home:  const  Splash_Screen(),
     );
   }
 }
