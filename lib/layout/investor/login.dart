@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:project_fundfinder/layout/investor/sign_up/sign_up.dart';
 import 'package:project_fundfinder/modules/botton_navigation.dart';
-import 'package:project_fundfinder/modules/splash.dart';
 import 'package:project_fundfinder/shared/components/containerbutton.dart';
 import 'package:project_fundfinder/shared/components/navigatorto.dart';
 import 'package:project_fundfinder/shared/components/text_from.dart';
