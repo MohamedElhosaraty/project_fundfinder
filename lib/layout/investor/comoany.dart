@@ -1,7 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:project_fundfinder/layout/investor/invest_now.dart';
 import 'package:project_fundfinder/shared/components/containerbutton.dart';
+import 'package:project_fundfinder/shared/components/navigatorto.dart';
 import 'package:project_fundfinder/shared/components/textbest.dart';
 
 class Company_Screen extends StatefulWidget {
@@ -58,7 +58,7 @@ class _Company_ScreenState extends State<Company_Screen>
                               color: Colors.white),
                           text: "Invest Now",
                           onPressed: () {
-                            //Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Splash_Screen(),));
+                            navigateTo(context,  Invest_now());
                           }),
                     ),
                   ],
