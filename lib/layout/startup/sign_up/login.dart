@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:project_fundfinder/layout/startup/sign_up/sign_up1.dart';
+import 'package:project_fundfinder/modules/botton_navigation2.dart';
 import 'package:project_fundfinder/modules/splash.dart';
 import 'package:project_fundfinder/shared/components/containerbutton.dart';
 import 'package:project_fundfinder/shared/components/navigatorto.dart';
@@ -181,7 +182,7 @@ class _Login_StartUpState extends State<Login_StartUp> {
                           ),
                         );
                         Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => Splash_Screen(),));
+                          builder: (context) => const Bottom_Navigation2(),));
                       }
 
 
