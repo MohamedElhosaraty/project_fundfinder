@@ -181,8 +181,7 @@ class _Login_StartUpState extends State<Login_StartUp> {
                           const SnackBar(content: Text('Success')
                           ),
                         );
-                        Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => const Bottom_Navigation2(),));
+                        navigateAndFinish(context, const Bottom_Navigation2());
                       }
 
 

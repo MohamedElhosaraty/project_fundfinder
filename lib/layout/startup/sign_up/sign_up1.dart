@@ -1,9 +1,11 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:project_fundfinder/layout/startup/sign_up/login.dart';
 import 'package:project_fundfinder/layout/startup/sign_up/sign_up2.dart';
 import 'package:project_fundfinder/shared/components/containerbutton.dart';
 import 'package:project_fundfinder/shared/components/navigatorto.dart';
 import 'package:project_fundfinder/shared/components/text_from.dart';
+import 'package:project_fundfinder/shared/components/textbest.dart';
 
 class Sign_Up1 extends StatefulWidget {
   const Sign_Up1({super.key});
@@ -142,6 +144,20 @@ class _Sign_up1State extends State<Sign_Up1> {
                       navigateAndFinish(context,const  Sign_Up2());
                     }
                   },),
+                const SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    TextBest(text: 'Already have an Account?',color: Colors.black,),
+                    InkWell(
+                        onTap: (){
+                          navigateAndFinish(context, const Login_StartUp());
+                        },
+                        child: TextBest(text: '     Login ',color: Colors.blueAccent,)),
+                  ],
+                )
               ],
             ),
           ),

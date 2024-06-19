@@ -200,7 +200,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       TextBest(text: 'Don\'t have an Account?',color: Colors.black,),
                       InkWell(
                           onTap: (){
-                            navigateTo(context, const Sign_Up());
+                            navigateAndFinish(context, const Sign_Up());
                           },
                           child: TextBest(text: '     Sign Up ',color: Colors.blueAccent,)),
                     ],

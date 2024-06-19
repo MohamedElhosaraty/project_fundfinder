@@ -3,6 +3,9 @@ import 'package:project_fundfinder/layout/investor/home.dart';
 import 'package:project_fundfinder/layout/investor/natification.dart';
 import 'package:project_fundfinder/layout/investor/profile.dart';
 import 'package:project_fundfinder/layout/investor/recomedend.dart';
+import 'package:project_fundfinder/layout/startup/home_startup.dart';
+import 'package:project_fundfinder/layout/startup/notification_startup.dart';
+import 'package:project_fundfinder/layout/startup/profile_startup.dart';
 
 class Bottom_Navigation2 extends StatefulWidget {
   const Bottom_Navigation2({super.key});
@@ -15,10 +18,9 @@ class _Bottom_Navigation2State extends State<Bottom_Navigation2> {
   int selectIndex = 0;
 
   List pages = const [
-    Home_Screen(),
-    Recomedend_Screen(),
-    Notification_Screen(),
-    Profile_Screen(),
+    Home_Startup_Screen(),
+    Notification_Startup_Screen(),
+    Profile_Startup_Screen(),
   ];
 
   @override
@@ -30,10 +32,6 @@ class _Bottom_Navigation2State extends State<Bottom_Navigation2> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: "Home",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.recommend_outlined),
-            label: "Recomedend",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.notification_important_outlined),

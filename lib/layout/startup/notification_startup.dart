@@ -67,10 +67,10 @@ class _Notification_Startup_ScreenState extends State<Notification_Startup_Scree
                           width: MediaQuery.sizeOf(context).width,
                           margin: const EdgeInsets.all(10),
                           decoration: BoxDecoration(
-                              color: Colors.blueAccent,
+                              color: Colors.blueAccent[100],
                               borderRadius: BorderRadius.circular(15),
                               boxShadow: const [
-                                BoxShadow(color: Colors.black87,blurRadius: 1,spreadRadius: 2)
+                                BoxShadow(color: Colors.black,blurRadius: 1,spreadRadius: 2)
                               ]),
                           child: Padding(
                             padding: const EdgeInsets.all(10.0),

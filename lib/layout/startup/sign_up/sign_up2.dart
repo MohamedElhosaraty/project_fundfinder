@@ -122,7 +122,7 @@ class _Sign_up2State extends State<Sign_Up2> {
                     TextBest(text: 'Already have an Account?',color: Colors.black,),
                     InkWell(
                         onTap: (){
-                          navigateTo(context, const Login_StartUp());
+                          navigateAndFinish(context, const Login_StartUp());
                         },
                         child: TextBest(text: '     Login ',color: Colors.blueAccent,)),
                   ],
