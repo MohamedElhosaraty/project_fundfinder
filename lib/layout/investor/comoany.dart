@@ -5,7 +5,12 @@ import 'package:project_fundfinder/shared/components/navigatorto.dart';
 import 'package:project_fundfinder/shared/components/textbest.dart';
 
 class Company_Screen extends StatefulWidget {
-  const Company_Screen({super.key});
+  Company_Screen({
+    super.key,
+    required this.company,
+  });
+
+  final company;
 
   @override
   State<Company_Screen> createState() => _Company_ScreenState();
@@ -30,21 +35,26 @@ class _Company_ScreenState extends State<Company_Screen>
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                height:  280,
+                height: 280,
                 child: Stack(
                   children: [
-                    Image.network(
-                      'https://th.bing.com/th/id/OIP.w8gLOa5WjupkJEdCNY8G-wHaD4?rs=1&pid=ImgDetMain',
+                    SizedBox(
+                      width: double.infinity,
+                      child: Image.network(
+                        'https://th.bing.com/th/id/OIP.w8gLOa5WjupkJEdCNY8G-wHaD4?rs=1&pid=ImgDetMain',
+                      ),
                     ),
                     Positioned(
                       top: 120,
                       left: 20,
                       child: InkWell(
                         onTap: () {},
-                        child: const CircleAvatar(
+                        child: CircleAvatar(
                             radius: 70,
-                            backgroundImage: NetworkImage(
-                                'https://th.bing.com/th/id/OIP.nVYMhjFjfKVWoI-VoPnnaAHaEK?rs=1&pid=ImgDetMain')),
+                            backgroundImage: AssetImage(
+                              widget.company['image'],
+                            ),
+                        ),
                       ),
                     ),
                     Positioned(
@@ -58,20 +68,20 @@ class _Company_ScreenState extends State<Company_Screen>
                               color: Colors.white),
                           text: "Invest Now",
                           onPressed: () {
-                            navigateTo(context,  Invest_now());
+                            navigateTo(context, Invest_now(company: widget.company,));
                           }),
                     ),
                   ],
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                padding: const EdgeInsets.symmetric(horizontal: 15.0,vertical: 20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     TextBest(
-                      text: "Company Name",
-                      fontSize: 25,
+                      text: widget.company["name"],fontWeight: FontWeight.bold,
+                      fontSize: 30,
                     ),
                     const SizedBox(
                       height: 10,
@@ -82,54 +92,126 @@ class _Company_ScreenState extends State<Company_Screen>
                       color: Colors.grey,
                       fontSize: 20,
                     ),
-                    TabBar(
-                        controller: myController,
-                        indicatorColor: Colors.blue,
-                        tabAlignment: TabAlignment.start,
-                        isScrollable: true,
-                        tabs: [
-                          Tab(
-                            child: TextBest(
-                              text: 'Posts',
-                            ),
-                          ),
-                          Tab(
-                            child: TextBest(text: 'Replies'),
-                          ),
-                          Tab(
-                            child: TextBest(text: 'Highlights'),
-                          ),
-                          Tab(
-                            child: TextBest(text: 'Media'),
-                          ),
-                          Tab(
-                            child: TextBest(text: 'Likes'),
-                          ),
-                        ]),
-                    SizedBox(
-                      height: 340,
-                      child: TabBarView(
-                        controller: myController,
-                        children: [
-                          Container(
-                            color: Colors.grey.shade300,
-                              child: Center(child: TextBest(text: 'Posts'))),
-                          Container(
-                              color: Colors.grey.shade300,
-                              child: Center(child: TextBest(text: 'Replies'))),
-                          Container(
-                              color: Colors.grey.shade300,
-                              child: Center(child: TextBest(text: 'Highlights'))),
-                          Container(
-                              color: Colors.grey.shade300,
-                              child: Center(child: TextBest(text: 'Media'))),
-                          Container(
-                              color: Colors.grey.shade300,
-                              child: Center(child: TextBest(text: 'Likes'))),
-
-                        ],
-                      ),
+                    const SizedBox(
+                      height: 20,
                     ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        TextBest(
+                          text: 'Raised',color: Colors.blueAccent,
+                          fontSize: 25,
+                        ),
+
+
+                        TextBest(
+                          text: widget.company["Raised"],
+                          fontSize: 25,
+                        ),
+
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        TextBest(
+                          text: 'investors',color: Colors.blueAccent,
+                          fontSize: 25,
+                        ),
+
+
+                        TextBest(
+                          text: widget.company["investors"],
+                          fontSize: 25,
+                        ),
+
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        TextBest(
+                          text: 'Min.investment',color: Colors.blueAccent,
+                          fontSize: 25,
+                        ),
+
+
+                        TextBest(
+                          text: widget.company["Min.investment"],
+                          fontSize: 25,
+                        ),
+
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    Center(
+                      child: ContainerButton(
+                          width: MediaQuery.of(context).size.width,
+                          style: const TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500,
+                              color: Colors.white),
+                          text: "Similar Companies",
+                          onPressed: () {
+                            //  navigateTo(context,  Invest_now());
+                          }),
+                    ),
+                    // TabBar(
+                    //     controller: myController,
+                    //     indicatorColor: Colors.blue,
+                    //     tabAlignment: TabAlignment.start,
+                    //     isScrollable: true,
+                    //     tabs: [
+                    //       Tab(
+                    //         child: TextBest(
+                    //           text: 'Posts',
+                    //         ),
+                    //       ),
+                    //       Tab(
+                    //         child: TextBest(text: 'Replies'),
+                    //       ),
+                    //       Tab(
+                    //         child: TextBest(text: 'Highlights'),
+                    //       ),
+                    //       Tab(
+                    //         child: TextBest(text: 'Media'),
+                    //       ),
+                    //       Tab(
+                    //         child: TextBest(text: 'Likes'),
+                    //       ),
+                    //     ]),
+                    // SizedBox(
+                    //   height: 340,
+                    //   child: TabBarView(
+                    //     controller: myController,
+                    //     children: [
+                    //       Container(
+                    //         color: Colors.grey.shade300,
+                    //           child: Center(child: TextBest(text: 'Posts'))),
+                    //       Container(
+                    //           color: Colors.grey.shade300,
+                    //           child: Center(child: TextBest(text: 'Replies'))),
+                    //       Container(
+                    //           color: Colors.grey.shade300,
+                    //           child: Center(child: TextBest(text: 'Highlights'))),
+                    //       Container(
+                    //           color: Colors.grey.shade300,
+                    //           child: Center(child: TextBest(text: 'Media'))),
+                    //       Container(
+                    //           color: Colors.grey.shade300,
+                    //           child: Center(child: TextBest(text: 'Likes'))),
+                    //
+                    //     ],
+                    //   ),
+                    // ),
                   ],
                 ),
               ),

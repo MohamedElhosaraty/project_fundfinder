@@ -34,10 +34,10 @@ class _Splash_ScreenState extends State<Splash_Screen> {
           ),
           AnimatedTextKit(
             animatedTexts: [
-              WavyAnimatedText('Found Finder',textStyle: const TextStyle(
+              WavyAnimatedText('FundFinder',textStyle: const TextStyle(
                   fontSize: 50,
                   fontWeight: FontWeight.w400,
-                  color: Color(0xffFF1F26)
+                  color: Colors.blueAccent,
               ),
               ),
 
@@ -47,7 +47,7 @@ class _Splash_ScreenState extends State<Splash_Screen> {
           const SizedBox(
             height: 50,
           ),
-          Lottie.asset('assets/images/animation_splash.json'),
+          Lottie.asset('assets/images/Animation - 1719532053301.json'),
 
         ],
       ),

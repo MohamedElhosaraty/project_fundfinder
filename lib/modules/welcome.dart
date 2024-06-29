@@ -19,52 +19,59 @@ class Welcome_Screen extends StatelessWidget {
           ),
           Center(
             child: SizedBox(
+              height: 100,
               width: MediaQuery.of(context).size.width,
-              child: TextLiquidFill(
-                text: 'Found Finder',
-                waveColor: Colors.blueAccent,
-                boxBackgroundColor: Colors.white,
-                textStyle: const  TextStyle(
-                  fontSize: 50.0,
-                  fontWeight: FontWeight.bold,
+              child: DefaultTextStyle(
+                style: const TextStyle(
+                  fontSize: 70,
+                  color: Colors.blueAccent,
+                  shadows: [
+                    Shadow(
+                      blurRadius: 7.0,
+                      color: Colors.white,
+                      offset: Offset(0, 0),
+                    ),
+                  ],
                 ),
-                boxHeight: 200.0,
+                child: AnimatedTextKit(
+                  repeatForever: true,
+                  animatedTexts: [
+                    FlickerAnimatedText(' FundFinder'),
+                  ],
+                ),
               ),
             ),
           ),
           const SizedBox(
             height: 30,
           ),
-          Lottie.asset(
-              'assets/images/animation_wel.json'),
-          const SizedBox(
-            height: 30,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              ContainerButton(
-                  width: MediaQuery.of(context).size.width*.40,
-                  style:const TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white
-                  ),
-                  text: 'Startup', onPressed: (){
-                navigateAndFinish(context, const Sign_Up1());
-
-              }),
-              ContainerButton(
-                  width: MediaQuery.of(context).size.width*.40,
-                  style: const  TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white
-                  ),
-                  text: 'Investor', onPressed: (){
-                navigateAndFinish(context, const Sign_Up());
-              })
-            ],
+          Lottie.asset('assets/images/animation_wel.json'),
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ContainerButton(
+                    width: MediaQuery.of(context).size.width * .40,
+                    style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                    text: 'Startup',
+                    onPressed: () {
+                      navigateAndFinish(context, const Sign_Up1());
+                    }),
+                ContainerButton(
+                    width: MediaQuery.of(context).size.width * .40,
+                    style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                    text: 'Investor',
+                    onPressed: () {
+                      navigateAndFinish(context, const Sign_Up());
+                    })
+              ],
+            ),
           ),
         ],
       ),

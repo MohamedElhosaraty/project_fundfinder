@@ -41,7 +41,7 @@ class _Sign_upState extends State<Sign_Up> {
                   width: MediaQuery.of(context).size.width*.80,
                   child: AnimatedTextKit(
                     animatedTexts: [
-                      WavyAnimatedText('  Found Finder',textStyle: const TextStyle(
+                      WavyAnimatedText('  FundFinder',textStyle: const TextStyle(
                           fontSize: 50,
                           fontWeight: FontWeight.w400,
                           color: Colors.blueAccent

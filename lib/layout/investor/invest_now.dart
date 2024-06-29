@@ -8,8 +8,10 @@ import 'package:project_fundfinder/shared/components/textbest.dart';
 
 class Invest_now extends StatefulWidget {
   Invest_now({
-    super.key,
+    super.key,required this.company,
   });
+
+  final company;
 
   @override
   State<Invest_now> createState() => _Invest_nowState();
@@ -28,10 +30,28 @@ class _Invest_nowState extends State<Invest_now> {
         child: Column(
           children: [
             SizedBox(
+              width: double.infinity,
               height: MediaQuery.sizeOf(context).height / 3,
-              child: Image.network(
-                fit: BoxFit.cover,
-                'https://th.bing.com/th/id/OIP.w8gLOa5WjupkJEdCNY8G-wHaD4?rs=1&pid=ImgDetMain',
+              child: Stack(
+                children: [
+                  Image.network(
+                    'https://th.bing.com/th/id/OIP.w8gLOa5WjupkJEdCNY8G-wHaD4?rs=1&pid=ImgDetMain',
+                  ),
+                  Positioned(
+                    top: 130,
+                    left: 20,
+                    child: InkWell(
+                      onTap: () {},
+                      child: CircleAvatar(
+                        radius: 70,
+                        backgroundImage: AssetImage(
+                          widget.company['image'],
+                        ),
+                      ),
+                    ),
+                  ),
+
+                ],
               ),
             ),
             Padding(
@@ -43,11 +63,30 @@ class _Invest_nowState extends State<Invest_now> {
                     height: 10,
                   ),
                   TextBest(
-                    text: "Company Name",
+                    text: widget.company["name"],
                     fontSize: 30,
                   ),
                   const SizedBox(
                     height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      TextBest(
+                        text: 'Min.investment',color: Colors.blueAccent,
+                        fontSize: 30,
+                      ),
+
+
+                      TextBest(
+                        text: widget.company["Min.investment"],
+                        fontSize: 25,
+                      ),
+
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 15,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -144,7 +183,7 @@ class _Invest_nowState extends State<Invest_now> {
                     ],
                   ),
                   SizedBox(
-                    height: MediaQuery.sizeOf(context).height / 4,
+                    height: MediaQuery.sizeOf(context).height / 4.5,
                   ),
                   ContainerButton(
                       style: const TextStyle(

@@ -41,7 +41,7 @@ class _Recomedend_ScreenState extends State<Recomedend_Screen> {
           builder: (context, index) {
             return InkWell(
               onTap: () {
-                navigateTo(context, const Company_Screen());
+                //navigateTo(context, const Company_Screen());
               },
               child: Card(
                 margin:
