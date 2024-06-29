@@ -1,13 +1,14 @@
 class EndPoints {
-  static String baseUrl =
-      'https://student.valuxapps.com/api/'; //'https://food-api-omega.vercel.app/api/v1/';
-  static String signIn = 'login'; //'user/signin';
+  static String baseUrl ="https://lucky-clear-anemone.ngrok-free.app/";
+  static String signIn = 'login';
   static String signUp = 'register';
   static String profile = 'profile';
 
 }
 
 class ApiKey {
+  static String recommend = 'recommend';
+  static String company = 'company';
   static String status = 'status';
   static String errorMessage = 'ErrorMessage';
   static String token = 'token';
