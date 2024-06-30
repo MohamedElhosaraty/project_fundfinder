@@ -6,6 +6,9 @@ import 'package:project_fundfinder/shared/components/navigatorto.dart';
 import 'package:project_fundfinder/shared/components/text_from.dart';
 import 'package:project_fundfinder/shared/components/textbest.dart';
 
+List allCompany=[];
+
+
 class Invest_now extends StatefulWidget {
   Invest_now({
     super.key,required this.company,
@@ -34,7 +37,7 @@ class _Invest_nowState extends State<Invest_now> {
         "arrow" : controller.text,
       }
     ] ;
-    List allCompany=[];
+    //List allCompany=[];
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -204,6 +207,7 @@ class _Invest_nowState extends State<Invest_now> {
                       text: "Buy Now",
                       onPressed: () {
                         allCompany.add(invest);
+                        print("-----------------------------$allCompany");
                         Fluttertoast.showToast(
                             msg:
                                 "Completed Buy $sum   The Arrow",

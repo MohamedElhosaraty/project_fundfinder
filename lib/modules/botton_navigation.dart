@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_fundfinder/layout/investor/home.dart';
+import 'package:project_fundfinder/layout/investor/invest_now.dart';
 import 'package:project_fundfinder/layout/investor/natification.dart';
 import 'package:project_fundfinder/layout/investor/profile.dart';
 import 'package:project_fundfinder/layout/investor/recomedend.dart';
@@ -17,7 +18,7 @@ class _Bottom_NavigationState extends State<Bottom_Navigation> {
   List pages =  [
     const Home_Screen(),
     const Notification_Screen(),
-   // Profile_Screen(),
+    Profile_Screen(company: allCompany,),
   ];
 
   @override

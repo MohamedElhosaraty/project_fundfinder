@@ -8,6 +8,8 @@ class EndPoints {
 
 class ApiKey {
   static String recommend = 'recommend';
+  static String recommendInvestor = 'recommend_investor';
+  static String investor = 'investor';
   static String company = 'company';
   static String status = 'status';
   static String errorMessage = 'ErrorMessage';

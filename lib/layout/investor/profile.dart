@@ -2,6 +2,8 @@ import 'dart:io';
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:project_fundfinder/cache/cache_helper.dart';
+import 'package:project_fundfinder/layout/investor/invest_now.dart';
 import 'package:project_fundfinder/shared/components/textbest.dart';
 
 
@@ -79,6 +81,7 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                   });
                 }else{}
                 Navigator.pop(context);
+
               },
               child:const Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -96,6 +99,7 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                   ),
                 ],
               ),
+
             ),
           ],
         ),
@@ -137,14 +141,9 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    InkWell(
-                      onTap:(){
-                        Navigator.pop(context);
-                      },
-                      child: TextBest(
-                          text: 'mo',//widget.company["name"],
-                      fontSize: 25,),
-                    ),
+                    TextBest(
+                        text: 'Mohamed',
+                    fontSize: 25,),
                     const SizedBox(
                       height: 10,
                     ),
@@ -231,7 +230,7 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                       height: 10,
                     ),
                     SizedBox(
-                      height: 130*5,//MediaQuery.of(context).size.height/2,
+                      height: 130*5,
                       child: ListView.builder(
                         physics: const NeverScrollableScrollPhysics(),
                           itemCount: widget.company.length,
@@ -247,8 +246,7 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                                      child:   CircleAvatar(
                                         radius: 35,
                                         backgroundImage:
-                                         AssetImage(widget.company[index][index]["image"])
-                                        //NetworkImage('https://stupidcancer.org/wp-content/uploads/2023/01/FundFinder-logo.png'),
+                                         AssetImage(widget.company[index][0]["image"])
                                       ),
                                    ),
                                     Column(
@@ -256,33 +254,44 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                       children: [
                                         TextBest(
-                                          text: '23 hours ago',
-                                          color: Colors.grey.shade700,
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.w300,
-                                        ),
-                                        TextBest(
-                                          text: 'Company1',
+                                          text: widget.company[index][0]["name"],
                                           color: Colors.black,
                                           fontSize: 18,
                                         ),
-                                        TextBest(
-                                          text: 'information about company1',
-                                          color: Colors.black,
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.bold,
-                                        )
+                                        Row(
+                                          children: [
+                                            TextBest(text: "arrow",
+                                              color: Colors.blueAccent,
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold,),
+                                            TextBest(
+                                              text: '    ${widget.company[index][0]["arrow"]} ',
+                                              color: Colors.black,
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+
+                                          ],
+                                        ),
                                       ],
                                     ),
                                     const Spacer(),
-                                    const Padding(
-                                      padding: EdgeInsets.all(10.0),
-                                      child: CircleAvatar(
-                                        radius: 15,
-                                        child: Icon(
-                                          Icons.more_horiz,
-                                          color: Colors.black,
-                                          size: 15,
+                                     Padding(
+                                      padding: const EdgeInsets.all(10.0),
+                                      child: InkWell(
+                                        onTap: (){
+                                          setState(() {
+                                            allCompany.removeAt(index);
+                                          });
+                                          print("----------------$allCompany");
+                                        },
+                                        child: const CircleAvatar(
+                                          radius: 25,
+                                          child: Icon(
+                                            Icons.delete,
+                                            color: Colors.blueAccent,
+                                            size: 30,
+                                          ),
                                         ),
                                       ),
                                     ),

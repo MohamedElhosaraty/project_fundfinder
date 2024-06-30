@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:project_fundfinder/cache/cache_helper.dart';
 import 'package:project_fundfinder/modules/botton_navigation2.dart';
 import 'package:project_fundfinder/modules/splash.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  CacheHelper().init();
   runApp(const MyApp());
 }
 
