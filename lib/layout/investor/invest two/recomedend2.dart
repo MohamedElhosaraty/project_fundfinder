@@ -7,16 +7,16 @@ import 'package:project_fundfinder/layout/investor/comoany.dart';
 import 'package:project_fundfinder/shared/components/navigatorto.dart';
 import 'package:project_fundfinder/shared/components/textbest.dart';
 
-class Recomedend_Screen extends StatefulWidget {
-  Recomedend_Screen({super.key, required this.company});
+class Recomedend_Screen2 extends StatefulWidget {
+  Recomedend_Screen2({super.key, required this.company});
 
   final company;
 
   @override
-  State<Recomedend_Screen> createState() => _Recomedend_ScreenState();
+  State<Recomedend_Screen2> createState() => _Recomedend_Screen2State();
 }
 
-class _Recomedend_ScreenState extends State<Recomedend_Screen> {
+class _Recomedend_Screen2State extends State<Recomedend_Screen2> {
   final controller = FixedExtentScrollController();
 
   List<Map> recommendCompany = [

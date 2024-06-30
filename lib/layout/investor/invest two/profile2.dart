@@ -7,18 +7,18 @@ import 'package:project_fundfinder/layout/investor/invest_now.dart';
 import 'package:project_fundfinder/shared/components/textbest.dart';
 
 
-class Profile_Screen extends StatefulWidget {
-   Profile_Screen({super.key, required this.company});
+class Profile_Screen2 extends StatefulWidget {
+   Profile_Screen2({super.key, required this.company});
 
   final List  company;
 
   @override
-  State<Profile_Screen> createState() => _Profile_ScreenState();
+  State<Profile_Screen2> createState() => _Profile_Screen2State();
 }
 
 
 
-class _Profile_ScreenState extends State<Profile_Screen> {
+class _Profile_Screen2State extends State<Profile_Screen2> {
 
 
   File? image;

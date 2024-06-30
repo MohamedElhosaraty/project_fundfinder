@@ -9,18 +9,18 @@ import 'package:project_fundfinder/shared/components/textbest.dart';
 List allCompany=[];
 
 
-class Invest_now extends StatefulWidget {
-  Invest_now({
+class Invest_now2 extends StatefulWidget {
+  Invest_now2({
     super.key,required this.company,
   });
 
   final company;
 
   @override
-  State<Invest_now> createState() => _Invest_nowState();
+  State<Invest_now2> createState() => _Invest_now2State();
 }
 
-class _Invest_nowState extends State<Invest_now> {
+class _Invest_now2State extends State<Invest_now2> {
   TextEditingController controller = TextEditingController();
 
   int sum = 10;

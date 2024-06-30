@@ -1,6 +1,9 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:project_fundfinder/layout/investor/sign_up/login.dart';
+import 'package:project_fundfinder/modules/botton_navigation.dart';
+import 'package:project_fundfinder/modules/botton_navigation3.dart';
 import 'package:project_fundfinder/modules/splash.dart';
 import 'package:project_fundfinder/shared/components/containerbutton.dart';
 import 'package:project_fundfinder/shared/components/navigatorto.dart';
@@ -21,6 +24,9 @@ class _Sign_upState extends State<Sign_Up> {
   final GlobalKey<FormState> _formState =  GlobalKey<FormState>();
   var emailController = TextEditingController();
   var passwordController = TextEditingController();
+
+   String _selectedItem = 'Crowd Investor';
+
 
 
 
@@ -138,8 +144,42 @@ class _Sign_upState extends State<Sign_Up> {
                       });
                     }
                 ),
+
+              Container(
+                padding:const EdgeInsets.all(10),
+                margin:const EdgeInsets.symmetric(vertical: 20),
+
+                height: 100,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: Colors.grey,
+                   borderRadius: BorderRadius.circular(22)
+                ),
+                child: DropdownButton<String>(
+                  isExpanded: true,
+                  iconSize: 40,
+                  hint: const Text('Select an item'),
+                  value: _selectedItem,
+                  onChanged: (String? newValue) {
+                    setState(() {
+                      _selectedItem = newValue!;
+                    });
+                  },
+                  items: <String>["Crowd Investor" , "VC Firm Angel Investor", ]
+                      .map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value,style: const TextStyle(
+                        fontSize: 25
+                      ),),
+                    );
+                  }).toList(),
+                ),
+              ),
+
+
                 const SizedBox(
-                  height: 100,
+                  height: 40,
                 ),
                 ContainerButton(
                   style: const TextStyle(
@@ -152,7 +192,13 @@ class _Sign_upState extends State<Sign_Up> {
                         const SnackBar(content: Text('Success')
                         ),
                       );
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Splash_Screen(),));
+                      if(_selectedItem == 'Crowd Investor'){
+                        navigateTo(context,  const Bottom_Navigation());
+
+                      }else{
+                        navigateTo(context,  const Bottom_Navigation3());
+
+                      }
 
                     }
                   },),

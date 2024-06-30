@@ -6,8 +6,8 @@ import 'package:project_fundfinder/shared/components/containerbutton.dart';
 import 'package:project_fundfinder/shared/components/navigatorto.dart';
 import 'package:project_fundfinder/shared/components/textbest.dart';
 
-class Company_Screen extends StatefulWidget {
-  Company_Screen({
+class Company_Screen2 extends StatefulWidget {
+  Company_Screen2({
     super.key,
      this.company,
   });
@@ -15,10 +15,10 @@ class Company_Screen extends StatefulWidget {
   final company;
 
   @override
-  State<Company_Screen> createState() => _Company_ScreenState();
+  State<Company_Screen2> createState() => _Company_Screen2State();
 }
 
-class _Company_ScreenState extends State<Company_Screen> {
+class _Company_Screen2State extends State<Company_Screen2> {
 
   @override
   Widget build(BuildContext context) {

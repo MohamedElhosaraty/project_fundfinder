@@ -3,14 +3,14 @@ import 'package:project_fundfinder/layout/investor/comoany.dart';
 import 'package:project_fundfinder/shared/components/navigatorto.dart';
 import 'package:project_fundfinder/shared/components/textbest.dart';
 
-class Home_Screen extends StatefulWidget {
-  const Home_Screen({super.key});
+class Home_Screen2 extends StatefulWidget {
+  const Home_Screen2({super.key});
 
   @override
-  State<Home_Screen> createState() => _Home_ScreenState();
+  State<Home_Screen2> createState() => _Home_Screen2State();
 }
 
-class _Home_ScreenState extends State<Home_Screen> {
+class _Home_Screen2State extends State<Home_Screen2> {
 
   List<Map> company =
   [

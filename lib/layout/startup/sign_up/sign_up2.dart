@@ -41,7 +41,7 @@ class _Sign_up2State extends State<Sign_Up2> {
                   width: MediaQuery.of(context).size.width*.80,
                   child: AnimatedTextKit(
                     animatedTexts: [
-                      WavyAnimatedText('  Found Finder',textStyle: const TextStyle(
+                      WavyAnimatedText('  FundFinder',textStyle: const TextStyle(
                           fontSize: 50,
                           fontWeight: FontWeight.w400,
                           color: Colors.blueAccent
@@ -93,7 +93,7 @@ class _Sign_up2State extends State<Sign_Up2> {
                   height: 15,
                 ),
                 TextForm(
-                  labelText: 'Investor',
+                  labelText: 'Founder',
                   obscureText: isPassword,
                   labelStyle: TextStyle(
                       fontSize: 20,
