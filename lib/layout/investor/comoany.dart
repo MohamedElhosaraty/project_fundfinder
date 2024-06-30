@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_fundfinder/layout/investor/invest_now.dart';
+import 'package:project_fundfinder/layout/investor/recomedend.dart';
 import 'package:project_fundfinder/shared/components/containerbutton.dart';
 import 'package:project_fundfinder/shared/components/navigatorto.dart';
 import 'package:project_fundfinder/shared/components/textbest.dart';
@@ -7,7 +8,7 @@ import 'package:project_fundfinder/shared/components/textbest.dart';
 class Company_Screen extends StatefulWidget {
   Company_Screen({
     super.key,
-    required this.company,
+     this.company,
   });
 
   final company;
@@ -161,7 +162,7 @@ class _Company_ScreenState extends State<Company_Screen>
                               color: Colors.white),
                           text: "Similar Companies",
                           onPressed: () {
-                            //  navigateTo(context,  Invest_now());
+                              navigateTo(context,   Recomedend_Screen(company: widget.company,));
                           }),
                     ),
                     // TabBar(

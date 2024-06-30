@@ -25,6 +25,17 @@ class _Invest_nowState extends State<Invest_now> {
 
   @override
   Widget build(BuildContext context) {
+
+    List invest =
+    [
+      {
+        "name" : widget.company["name"],
+        "image" : widget.company["image"],
+        "arrow" : controller.text,
+      }
+    ] ;
+    List allCompany=[];
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -192,6 +203,7 @@ class _Invest_nowState extends State<Invest_now> {
                           color: Colors.white),
                       text: "Buy Now",
                       onPressed: () {
+                        allCompany.add(invest);
                         Fluttertoast.showToast(
                             msg:
                                 "Completed Buy $sum   The Arrow",
@@ -201,7 +213,7 @@ class _Invest_nowState extends State<Invest_now> {
                             backgroundColor: Colors.blueAccent,
                             textColor: Colors.white,
                             fontSize: 20.0);
-                        navigateAndFinish(context, const Profile_Screen());
+                        navigateTo(context,  Profile_Screen(company: allCompany,));
                       }),
                 ],
               ),

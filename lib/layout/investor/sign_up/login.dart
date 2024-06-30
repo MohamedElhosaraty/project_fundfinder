@@ -183,7 +183,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           const SnackBar(content: Text('Success')
                           ),
                         );
-                       navigateAndFinish(context, const Bottom_Navigation());
+                       navigateTo(context,  const Bottom_Navigation());
 
                       }
                      // Navigator.of(context).push(MaterialPageRoute(builder: (context) =>const Splash_Screen(),));

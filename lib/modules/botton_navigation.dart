@@ -14,11 +14,10 @@ class Bottom_Navigation extends StatefulWidget {
 class _Bottom_NavigationState extends State<Bottom_Navigation> {
   int selectIndex = 0;
 
-  List pages = const [
-    Home_Screen(),
-    Recomedend_Screen(),
-    Notification_Screen(),
-    Profile_Screen(),
+  List pages =  [
+    const Home_Screen(),
+    const Notification_Screen(),
+   // Profile_Screen(),
   ];
 
   @override
@@ -30,10 +29,6 @@ class _Bottom_NavigationState extends State<Bottom_Navigation> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: "Home",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.recommend_outlined),
-            label: "Recomedend",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.notification_important_outlined),

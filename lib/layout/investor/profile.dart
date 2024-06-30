@@ -6,13 +6,18 @@ import 'package:project_fundfinder/shared/components/textbest.dart';
 
 
 class Profile_Screen extends StatefulWidget {
-  const Profile_Screen({super.key});
+   Profile_Screen({super.key, required this.company});
+
+  final List  company;
 
   @override
   State<Profile_Screen> createState() => _Profile_ScreenState();
 }
 
+
+
 class _Profile_ScreenState extends State<Profile_Screen> {
+
 
   File? image;
 
@@ -101,6 +106,7 @@ class _Profile_ScreenState extends State<Profile_Screen> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body: SingleChildScrollView(
         child: SafeArea(
@@ -131,9 +137,14 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    TextBest(
-                        text: "Mohamed Elhosaraty",
-                    fontSize: 25,),
+                    InkWell(
+                      onTap:(){
+                        Navigator.pop(context);
+                      },
+                      child: TextBest(
+                          text: 'mo',//widget.company["name"],
+                      fontSize: 25,),
+                    ),
                     const SizedBox(
                       height: 10,
                     ),
@@ -223,19 +234,21 @@ class _Profile_ScreenState extends State<Profile_Screen> {
                       height: 130*5,//MediaQuery.of(context).size.height/2,
                       child: ListView.builder(
                         physics: const NeverScrollableScrollPhysics(),
-                          itemCount: 5,
-                          itemBuilder: (index , context) {
+                          itemCount: widget.company.length,
+                          itemBuilder: (context , index) {
                             return  SizedBox(
                               height: 130,
                               child: Card(
                                 margin: const EdgeInsets.all(10),
                                 child:  Row(
                                   children: [
-                                  const Padding(
-                                     padding:  EdgeInsets.all(10.0),
+                                   Padding(
+                                     padding: const  EdgeInsets.all(10.0),
                                      child:   CircleAvatar(
                                         radius: 35,
-                                        backgroundImage: NetworkImage('https://stupidcancer.org/wp-content/uploads/2023/01/FundFinder-logo.png'),
+                                        backgroundImage:
+                                         AssetImage(widget.company[index][index]["image"])
+                                        //NetworkImage('https://stupidcancer.org/wp-content/uploads/2023/01/FundFinder-logo.png'),
                                       ),
                                    ),
                                     Column(
