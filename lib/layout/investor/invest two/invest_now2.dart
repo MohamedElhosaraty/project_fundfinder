@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:project_fundfinder/layout/investor/invest%20two/profile2.dart';
 import 'package:project_fundfinder/layout/investor/profile.dart';
 import 'package:project_fundfinder/shared/components/containerbutton.dart';
 import 'package:project_fundfinder/shared/components/navigatorto.dart';
@@ -21,10 +22,8 @@ class Invest_now2 extends StatefulWidget {
 }
 
 class _Invest_now2State extends State<Invest_now2> {
-  TextEditingController controller = TextEditingController();
-
-  int sum = 10;
-
+  TextEditingController controller1 = TextEditingController();
+  TextEditingController controller2 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +33,8 @@ class _Invest_now2State extends State<Invest_now2> {
       {
         "name" : widget.company["name"],
         "image" : widget.company["image"],
-        "arrow" : controller.text,
+        "amount" : '500000',
+        "proposed" : '20%',
       }
     ] ;
 
@@ -86,13 +86,13 @@ class _Invest_now2State extends State<Invest_now2> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       TextBest(
-                        text: 'Min.investment',color: Colors.blueAccent,
+                        text: 'Funding Amount',color: Colors.blueAccent,
                         fontSize: 30,
                       ),
 
 
                       TextBest(
-                        text: widget.company["Min.investment"],
+                        text: "${(widget.company["fundingAmount"]/10000).toString()}K\$",
                         fontSize: 25,
                       ),
 
@@ -105,114 +105,41 @@ class _Invest_now2State extends State<Invest_now2> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       TextBest(
-                        text: "Share Price",
+                        text: "Round Type",
                         fontSize: 30,
                         color: Colors.blueAccent,
                       ),
                       TextBest(
-                        text: "10\$",
+                        text: widget.company["roundType"],
                         fontSize: 30,
                         color: Colors.black,
                       ),
                     ],
                   ),
-
                   const SizedBox(
-                    height: 30,
+                    height: 20,
                   ),
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                        color: Colors.grey.shade300,
-                        borderRadius: BorderRadius.circular(22)
-                    ),
-                    child: Column(
-                      children: [
-                        const SizedBox(
-                          height: 15,
-                        ),
-                        Center(
-                          child: TextBest(
-                            text: "Number of Arrow",
-                            fontSize: 30,
-                            color: Colors.black87,
-                          ),
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            InkWell(
-                              onTap: (){
-                                setState(() {
-                                  sum--;
-                                  controller.text  = sum.toString();
-                                });
-                              },
-
-                              child: const CircleAvatar(
-                                radius: 15,
-                                child: Icon(Icons.remove),
-                              ),
-                            ),
-                            SizedBox(
-                              width: 300,
-                              height: 60,
-                              child: TextForm(
-                                textAlign: TextAlign.center,
-                                controller: controller,
-                                onChanged: (value) {
-                                  setState(() {
-                                    sum = int.parse(value) ;
-                                  });
-                                },
-                                keyBoard: TextInputType.number,
-                                style: const TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 30,
-                                    color: Colors.black87),
-                                hintText: '10',
-                                hintStyle: const TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 30,
-                                    color: Colors.black87),
-                              ),
-                            ),
-                             InkWell(
-                               onTap: (){
-                                 setState(() {
-                                   sum++;
-                                   controller.text  = sum.toString();
-                                 });
-                               },
-                               child: const CircleAvatar(
-                                radius: 15,
-                                child: Icon(Icons.add),
-                                                     ),
-                             ),
-                          ],
-                        ),
-                        const SizedBox(
-                          height: 25,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            TextBest(
-                              text: "Total Price",
-                              fontSize: 30,
-                              color: Colors.blueAccent,
-                            ),
-                            TextBest(
-                              text:  "${sum  * 10} \$",
-                              fontSize: 30,
-                              color: Colors.black,
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
+                  TextBest(text: 'Investment Amount',fontSize: 25,),
+                  TextForm(
+                    controller: controller1,
                   ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  TextBest(text: 'Proposed Equity',fontSize: 25,),
 
+                  TextForm(
+                    controller: controller2,
+
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  TextBest(text: 'Terms',fontSize: 25,),
+
+                  TextForm(
+
+                  ),
 
 
                   const SizedBox(
@@ -229,14 +156,14 @@ class _Invest_now2State extends State<Invest_now2> {
                         print("-----------------------------$allCompany");
                         Fluttertoast.showToast(
                             msg:
-                                "Completed Buy $sum   The Arrow",
+                                "Request has been sent",
                             toastLength: Toast.LENGTH_LONG,
                             gravity: ToastGravity.BOTTOM,
                             timeInSecForIosWeb: 1,
                             backgroundColor: Colors.blueAccent,
                             textColor: Colors.white,
                             fontSize: 20.0);
-                        navigateTo(context,  Profile_Screen(company: allCompany,));
+                        navigateTo(context,  Profile_Screen2(company: allCompany,));
                       }),
                 ],
               ),

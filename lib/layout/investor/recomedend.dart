@@ -267,6 +267,8 @@ class _Recomedend_ScreenState extends State<Recomedend_Screen> {
         ),
         centerTitle: true,
       ),
+      //  final controller = FixedExtentScrollController();
+
       floatingActionButton: FloatingActionButton(
           child: const Icon(
             Icons.arrow_forward,

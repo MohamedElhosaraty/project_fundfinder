@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_fundfinder/layout/investor/invest%20two/invest_now2.dart';
 import 'package:project_fundfinder/shared/components/textbest.dart';
 
 class Notification_Screen2 extends StatefulWidget {
@@ -44,7 +45,7 @@ class _Notification_Screen2State extends State<Notification_Screen2> {
           width: MediaQuery.of(context).size.width,
           child: ListView.builder(
             controller: controller,
-              itemCount: 10,
+              itemCount: 1,
               scrollDirection: Axis.vertical,
               itemBuilder: (context ,index){
               final itemOffset = index * MediaQuery.sizeOf(context).height/5.2;
@@ -63,19 +64,19 @@ class _Notification_Screen2State extends State<Notification_Screen2> {
                     alignment: Alignment.center,
                     transform: Matrix4.identity()..scale(scale,1.0),
                     child: Container(
-                      alignment: Alignment.center,
-                      height: MediaQuery.sizeOf(context).height/5.5,
+                      alignment: Alignment.centerLeft,
+                      height: MediaQuery.sizeOf(context).height/10,
                       width: MediaQuery.sizeOf(context).width,
                       margin: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
-                        color: Colors.blueAccent[100],
+                        color: Colors.grey,
                         borderRadius: BorderRadius.circular(15),
                         boxShadow: const [
                           BoxShadow(color: Colors.black,blurRadius: 1,spreadRadius: 2)
                       ]),
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
-                        child: TextBest(text: "Depending what notifications you want, you can change settings for certain apps or for your whole phone. Notifications show when you swipe down from the top of your screen.",),
+                        child: TextBest(text:"Request hae been Sent to Adecco.",),
                       )
                     ),
                   ),

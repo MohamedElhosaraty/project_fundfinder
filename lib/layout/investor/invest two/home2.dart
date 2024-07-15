@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_fundfinder/layout/investor/comoany.dart';
+import 'package:project_fundfinder/layout/investor/invest%20two/comoany2.dart';
 import 'package:project_fundfinder/shared/components/navigatorto.dart';
 import 'package:project_fundfinder/shared/components/textbest.dart';
 
@@ -14,6 +15,104 @@ class _Home_Screen2State extends State<Home_Screen2> {
 
   List<Map> company =
   [
+    {
+      "name" : "Acer",
+      "image" : "assets/images/image7.jpg",
+      "Raised" : "2.92\$",
+      "investors" : "14784",
+      "Min.investment" : "30\$",
+      'email': "Eltantawy@gmail.com",
+      'industry': "Food and Beverage",
+      'description': "Delivering delightful culinary experiences to your doorstep.",
+      'founder': "Laura Martinez",
+      'executiveSummary': "Foodie Delight offers gourmet meal kits and food delivery services.",
+      'businessModel': "Subscription-based meal kits and on-demand delivery.",
+      'marketAnalysis': "The food delivery market is booming with increased demand for convenience.",
+      'productsAndServices': "Gourmet meal kits, on-demand food delivery, and catering services.",
+      'revenueModel': "Subscription fees, delivery charges, and service fees.",
+      'fundingRequirements': "Seeking \$3 million to expand our delivery network and kitchen facilities.",
+      'team': "Chefs, logistics experts, and marketing specialists.",
+      'roundType': "Series B",
+      'fundingAmount': 3000000,
+      'minimumInvestment': 100000,
+      'sharePrice': 15
+
+    },
+    {
+      "name" : "Acxiom",
+      "image" : "assets/images/image8.jpg",
+      "Raised" : "3.32\$",
+      "investors" : "14564",
+      "Min.investment" : "20\$",
+      'email': "Kareem@gmail.com",
+      'industry': "Health and Fitness",
+      'description': "Empowering healthier lifestyles through innovative fitness solutions.",
+      'founder': "Chris Lee",
+      'executiveSummary': "FitLife provides fitness solutions to help individuals lead healthier lives.",
+      'businessModel': "Subscription-based fitness apps and equipment sales.",
+      'marketAnalysis': "The fitness industry is growing with increasing health consciousness.",
+      'productsAndServices': "Fitness tracking apps, home workout equipment, and personalized coaching.",
+      'revenueModel': "Subscription fees and product sales.",
+      'fundingRequirements': "Seeking \$2 million to develop new fitness products and expand our customer base.",
+      'team': "Fitness experts, software developers, and sales professionals.",
+      'roundType': "Seed",
+      'fundingAmount': 2000000,
+      'minimumInvestment': 50000,
+      'sharePrice': 9
+
+
+
+    },
+    {
+      "name" : "Adecco",
+      "image" : "assets/images/image9.jpg",
+      "Raised" : "6.12\$",
+      "investors" : "25844",
+      "Min.investment" : "5\$",
+      'email': "Assad@gmail.com",
+      'industry': "Transportation",
+      'description': "Revolutionizing urban transportation with smart mobility solutions.",
+      'founder': "Anna Clark",
+      'executiveSummary': "Urban Mobility offers smart transportation solutions for city dwellers.",
+      'businessModel': "B2B services for urban planning and consumer apps.",
+      'marketAnalysis': "The urban mobility market is growing with increased focus on smart cities.",
+      'productsAndServices': "Ride-sharing apps, electric scooters, and smart parking solutions.",
+      'revenueModel': "Service fees, subscription fees, and advertising.",
+      'fundingRequirements': "Seeking \$4 million to expand our product line and enter new markets.",
+      'team': "Transportation experts, software developers, and urban planners.",
+      'roundType': "Series A",
+      'fundingAmount': 4000000,
+      'minimumInvestment': 100000,
+      'sharePrice': 14
+
+
+
+    },
+    {
+      "name" : "AEG",
+      "image" : "assets/images/most.png",
+      "Raised" : "6.82\$",
+      "investors" : "14784",
+      "Min.investment" : "10\$",
+      'email': "Hand@gmail.com",
+      'industry': "Real Estate",
+      'description': "Building sustainable homes for a better future.",
+      'founder': "Robert Thompson",
+      'executiveSummary': "GreenHome develops eco-friendly housing solutions.",
+      'businessModel': "B2C sales of sustainable homes.",
+      'marketAnalysis': "The sustainable housing market is expanding with increased demand for green living.",
+      'productsAndServices': "Eco-friendly homes, energy-efficient appliances, and smart home systems.",
+      'revenueModel': "Home sales and service fees.",
+      'fundingRequirements': "Seeking \$5 million to develop new housing projects and expand our reach.",
+      'team': "Real estate experts, architects, and sustainability consultants.",
+      'roundType': "Series B",
+      'fundingAmount': 5000000,
+      'minimumInvestment': 150000,
+      'sharePrice': 20
+
+
+
+    },
     {
       "name" : "ABB",
       "email" : "Mohamed@gmail.com",
@@ -158,104 +257,7 @@ class _Home_Screen2State extends State<Home_Screen2> {
 
 
     },
-    {
-      "name" : "Acer",
-      "image" : "assets/images/image7.jpg",
-      "Raised" : "2.92\$",
-      "investors" : "14784",
-      "Min.investment" : "30\$",
-      'email': "Eltantawy@gmail.com",
-      'industry': "Food and Beverage",
-      'description': "Delivering delightful culinary experiences to your doorstep.",
-      'founder': "Laura Martinez",
-      'executiveSummary': "Foodie Delight offers gourmet meal kits and food delivery services.",
-      'businessModel': "Subscription-based meal kits and on-demand delivery.",
-      'marketAnalysis': "The food delivery market is booming with increased demand for convenience.",
-      'productsAndServices': "Gourmet meal kits, on-demand food delivery, and catering services.",
-      'revenueModel': "Subscription fees, delivery charges, and service fees.",
-      'fundingRequirements': "Seeking \$3 million to expand our delivery network and kitchen facilities.",
-      'team': "Chefs, logistics experts, and marketing specialists.",
-      'roundType': "Series B",
-      'fundingAmount': 3000000,
-      'minimumInvestment': 100000,
-      'sharePrice': 15
 
-    },
-    {
-      "name" : "Acxiom",
-      "image" : "assets/images/image8.jpg",
-      "Raised" : "3.32\$",
-      "investors" : "14564",
-      "Min.investment" : "20\$",
-      'email': "Kareem@gmail.com",
-      'industry': "Health and Fitness",
-      'description': "Empowering healthier lifestyles through innovative fitness solutions.",
-      'founder': "Chris Lee",
-      'executiveSummary': "FitLife provides fitness solutions to help individuals lead healthier lives.",
-      'businessModel': "Subscription-based fitness apps and equipment sales.",
-      'marketAnalysis': "The fitness industry is growing with increasing health consciousness.",
-      'productsAndServices': "Fitness tracking apps, home workout equipment, and personalized coaching.",
-      'revenueModel': "Subscription fees and product sales.",
-      'fundingRequirements': "Seeking \$2 million to develop new fitness products and expand our customer base.",
-      'team': "Fitness experts, software developers, and sales professionals.",
-      'roundType': "Seed",
-      'fundingAmount': 2000000,
-      'minimumInvestment': 50000,
-      'sharePrice': 9
-
-
-
-    },
-    {
-    "name" : "Adecco",
-      "image" : "assets/images/image9.jpg",
-      "Raised" : "6.12\$",
-      "investors" : "25844",
-      "Min.investment" : "5\$",
-      'email': "Assad@gmail.com",
-      'industry': "Transportation",
-      'description': "Revolutionizing urban transportation with smart mobility solutions.",
-      'founder': "Anna Clark",
-      'executiveSummary': "Urban Mobility offers smart transportation solutions for city dwellers.",
-      'businessModel': "B2B services for urban planning and consumer apps.",
-      'marketAnalysis': "The urban mobility market is growing with increased focus on smart cities.",
-      'productsAndServices': "Ride-sharing apps, electric scooters, and smart parking solutions.",
-      'revenueModel': "Service fees, subscription fees, and advertising.",
-      'fundingRequirements': "Seeking \$4 million to expand our product line and enter new markets.",
-      'team': "Transportation experts, software developers, and urban planners.",
-      'roundType': "Series A",
-      'fundingAmount': 4000000,
-      'minimumInvestment': 100000,
-      'sharePrice': 14
-
-
-
-    },
-    {
-    "name" : "AEG",
-      "image" : "assets/images/most.png",
-      "Raised" : "6.82\$",
-      "investors" : "14784",
-      "Min.investment" : "10\$",
-      'email': "Hand@gmail.com",
-      'industry': "Real Estate",
-      'description': "Building sustainable homes for a better future.",
-      'founder': "Robert Thompson",
-      'executiveSummary': "GreenHome develops eco-friendly housing solutions.",
-      'businessModel': "B2C sales of sustainable homes.",
-      'marketAnalysis': "The sustainable housing market is expanding with increased demand for green living.",
-      'productsAndServices': "Eco-friendly homes, energy-efficient appliances, and smart home systems.",
-      'revenueModel': "Home sales and service fees.",
-      'fundingRequirements': "Seeking \$5 million to develop new housing projects and expand our reach.",
-      'team': "Real estate experts, architects, and sustainability consultants.",
-      'roundType': "Series B",
-      'fundingAmount': 5000000,
-      'minimumInvestment': 150000,
-      'sharePrice': 20
-
-
-
-    },
 
   ];
 
@@ -313,7 +315,7 @@ class BuildPageView extends StatelessWidget{
           itemBuilder: (context, index) {
             return InkWell(
               onTap: (){
-                navigateTo(context, Company_Screen(company: company[index],));
+                navigateTo(context, Company_Screen2(company: company[index],));
               },
               child: AnimatedBuilder(
                 animation: controller,

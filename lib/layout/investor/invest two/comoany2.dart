@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:project_fundfinder/layout/investor/invest%20two/invest_now2.dart';
+import 'package:project_fundfinder/layout/investor/invest%20two/recomedend2.dart';
 import 'package:project_fundfinder/layout/investor/invest_now.dart';
 import 'package:project_fundfinder/layout/investor/recomedend.dart';
 import 'package:project_fundfinder/shared/components/containerbutton.dart';
@@ -62,7 +64,7 @@ class _Company_Screen2State extends State<Company_Screen2> {
                               color: Colors.white),
                           text: "Invest Now",
                           onPressed: () {
-                            navigateTo(context, Invest_now(company: widget.company,));
+                            navigateTo(context, Invest_now2(company: widget.company,));
                           }),
                     ),
                   ],
@@ -397,7 +399,7 @@ class _Company_Screen2State extends State<Company_Screen2> {
                         color: Colors.white),
                     text: "Similar Companies",
                     onPressed: () {
-                      navigateTo(context,   Recomedend_Screen(company: widget.company,));
+                      navigateTo(context,   Recomedend_Screen2(company: widget.company,));
                     }),
               ),
               const SizedBox(

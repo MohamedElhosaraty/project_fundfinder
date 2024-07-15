@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_fundfinder/layout/investor/invest_now.dart';
 import 'package:project_fundfinder/shared/components/textbest.dart';
 
 class Notification_Screen extends StatefulWidget {
@@ -75,7 +76,7 @@ class _Notification_ScreenState extends State<Notification_Screen> {
                       ]),
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
-                        child: TextBest(text: "Depending what notifications you want, you can change settings for certain apps or for your whole phone. Notifications show when you swipe down from the top of your screen.",),
+                        child: TextBest(text: "Request hae been Sent to Adecco.",),
                       )
                     ),
                   ),

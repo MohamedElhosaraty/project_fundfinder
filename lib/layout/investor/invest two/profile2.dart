@@ -142,7 +142,7 @@ class _Profile_Screen2State extends State<Profile_Screen2> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     TextBest(
-                        text: 'Mohamed Elhosaraty',
+                        text: 'EP One',
                     fontSize: 25,),
                     const SizedBox(
                       height: 10,
@@ -216,18 +216,18 @@ class _Profile_Screen2State extends State<Profile_Screen2> {
                                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                       children: [
                                         TextBest(
-                                          text: widget.company[index][0]["name"],
+                                          text: widget.company[index][0]["amount"],
                                           color: Colors.black,
                                           fontSize: 18,
                                         ),
                                         Row(
                                           children: [
-                                            TextBest(text: "Share",
+                                            TextBest(text: "Equity",
                                               color: Colors.blueAccent,
                                               fontSize: 20,
                                               fontWeight: FontWeight.bold,),
                                             TextBest(
-                                              text: '    ${widget.company[index][0]["arrow"]} ',
+                                              text: '    ${widget.company[index][0]["proposed"]} ',
                                               color: Colors.black,
                                               fontSize: 18,
                                               fontWeight: FontWeight.bold,
