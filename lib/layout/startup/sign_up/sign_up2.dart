@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:project_fundfinder/layout/startup/sign_up/login.dart';
+import 'package:project_fundfinder/layout/startup/sign_up/sign_up3.dart';
 import 'package:project_fundfinder/modules/splash.dart';
 import 'package:project_fundfinder/shared/components/containerbutton.dart';
 import 'package:project_fundfinder/shared/components/navigatorto.dart';
@@ -56,7 +57,7 @@ class _Sign_up2State extends State<Sign_Up2> {
                 ),
 
                 TextForm(
-                  labelText: 'Industry',
+                  labelText: 'BusinessModel',
                   labelStyle: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -82,7 +83,7 @@ class _Sign_up2State extends State<Sign_Up2> {
                 ),
                 TextForm(
                   controller: emailController,
-                  labelText: 'Number of Employees',
+                  labelText: 'ExecutiveSummary',
                   labelStyle: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -101,17 +102,30 @@ class _Sign_up2State extends State<Sign_Up2> {
                       color: Colors.blue[300]
                   ),
                 ),
+                const SizedBox(
+                  height: 15,
+                ),
+
+                TextForm(
+                  labelText: 'MarketAnalysis',
+                  obscureText: isPassword,
+                  labelStyle: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue[300]
+                  ),
+                ),
 
                const  SizedBox(
-                  height: 100,
+                  height: 80,
                 ),
                 ContainerButton(
                   style:const  TextStyle(
                       fontSize: 20,fontWeight: FontWeight.w500,color: Colors.white
                   ),
-                  text: "Sign Up",
+                  text: "Follow",
                   onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Splash_Screen(),));
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Sign_Up3(),));
                   },),
                 const SizedBox(
                   height: 20,

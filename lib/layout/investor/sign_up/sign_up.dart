@@ -149,10 +149,10 @@ class _Sign_upState extends State<Sign_Up> {
                 padding:const EdgeInsets.all(10),
                 margin:const EdgeInsets.symmetric(vertical: 20),
 
-                height: 100,
+                height: 70,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
-                  color: Colors.grey,
+                  color: Colors.grey.shade200,
                    borderRadius: BorderRadius.circular(22)
                 ),
                 child: DropdownButton<String>(
@@ -165,7 +165,7 @@ class _Sign_upState extends State<Sign_Up> {
                       _selectedItem = newValue!;
                     });
                   },
-                  items: <String>["Crowd Investor" , "VC Firm Angel Investor", ]
+                  items: <String>["Crowd Investor" , "VC Firm Or Angel Investor", ]
                       .map<DropdownMenuItem<String>>((String value) {
                     return DropdownMenuItem<String>(
                       value: value,

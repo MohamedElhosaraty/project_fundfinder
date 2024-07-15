@@ -126,9 +126,20 @@ class _Sign_up1State extends State<Sign_Up1> {
                       });
                     }
                 ),
+                const SizedBox(
+                  height: 15,
+                ),
+                TextForm(
+                  labelText: 'Industry',
+                  labelStyle: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue[300]
+                  ),
+                ),
 
                const SizedBox(
-                  height: 100,
+                  height: 80,
                 ),
                 ContainerButton(
                   style:const  TextStyle(
